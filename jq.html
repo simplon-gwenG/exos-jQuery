@@ -9,30 +9,35 @@
 	<h1>EXERCICE JQUERY</h1>
 	 <div id="container">
   <form>
-    <ul>
-		
-        <div id="login">
+		<ul>
+		 <div id="login">
             <label for="username">Login</label>
-            <span><input id="login" name="login" type="text" placeholder="saisissez votre login"/></span>
+            <span><input id="login" name="login" type="text" placeholder="saisissez votre login" required /></span>
         </div>
-		
-		
+				
         <div id="MDP">
             <label for="pass1">MDP </label>
-            <span><input id="pass" type="password" name="pass" placeholder="saississez un mot de passe"/></span>
+            <span><input id="pass" type="password" name="pass" placeholder="saississez un mot de passe" onchange="recupValeur(this.value)" required /></span>
 		 </div>
-		
-	
+			
 		 <div id="recupMdp">
            			<span><button name="button">Mot de passe oublié</button></span>
-            <span><input id="recupMdp" type="email" name="recupMdp" placeholder="saississez votre adresse mail"/></span>
+            <span><input id="recup" type="email" name="recup" placeholder="saississez votre adresse mail"/></span>
 		 </div>
 	
-		        <div id ="submit">
+		<div id ="submit">
             <button type="submit">Soumettre</button>
         </div>
 	
-	</ul>
+		</ul>
+	<div id="pswd_info">
+    <h2>Votre mot de passe doit contenir:</h2>
+    <ul>
+        <li id="letter" class="invalid">Au moins <strong> une lettre</strong></li>
+        <li id="number" class="invalid">Au moins <strong>un chiffre </strong></li>
+        <li id="length" class="invalid">Au moins <strong>5 charactères</strong></li>
+    </ul>
+</div>
 </form>
 </div>
  
